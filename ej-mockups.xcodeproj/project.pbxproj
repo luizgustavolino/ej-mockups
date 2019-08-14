@@ -1206,9 +1206,6 @@
 		OBJ_3074 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_496 /* Package.swift */; };
 		OBJ_3080 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_870 /* Package.swift */; };
 		OBJ_930 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* app.swift */; };
-		OBJ_931 /* boot.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* boot.swift */; };
-		OBJ_932 /* configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* configure.swift */; };
-		OBJ_933 /* routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* routes.swift */; };
 		OBJ_935 /* Vapor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vapor::Vapor::Product" /* Vapor.framework */; };
 		OBJ_936 /* WebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "WebSocket::WebSocket::Product" /* WebSocket.framework */; };
 		OBJ_937 /* NIOWebSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-nio::NIOWebSocket::Product" /* NIOWebSocket.framework */; };
@@ -5132,7 +5129,6 @@
 		OBJ_136 /* Deprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deprecated.swift; sourceTree = "<group>"; };
 		OBJ_137 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
 		OBJ_138 /* FluentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluentError.swift; sourceTree = "<group>"; };
-		OBJ_14 /* boot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boot.swift; sourceTree = "<group>"; };
 		OBJ_141 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
 		OBJ_142 /* FluentSQLQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluentSQLQuery.swift; sourceTree = "<group>"; };
 		OBJ_143 /* FluentSQLSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluentSQLSchema.swift; sourceTree = "<group>"; };
@@ -5142,7 +5138,6 @@
 		OBJ_147 /* SQL+QuerySupporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQL+QuerySupporting.swift"; sourceTree = "<group>"; };
 		OBJ_148 /* SQL+SchemaSupporting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SQL+SchemaSupporting.swift"; sourceTree = "<group>"; };
 		OBJ_149 /* SchemaBuilder+Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchemaBuilder+Field.swift"; sourceTree = "<group>"; };
-		OBJ_15 /* configure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = configure.swift; sourceTree = "<group>"; };
 		OBJ_150 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/opt/vapor/ej-mockups/.build/checkouts/fluent/Package.swift"; sourceTree = "<group>"; };
 		OBJ_153 /* Exports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exports.swift; sourceTree = "<group>"; };
 		OBJ_154 /* SQLAlterTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLAlterTable.swift; sourceTree = "<group>"; };
@@ -5151,7 +5146,6 @@
 		OBJ_157 /* SQLBind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLBind.swift; sourceTree = "<group>"; };
 		OBJ_158 /* SQLBoolLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLBoolLiteral.swift; sourceTree = "<group>"; };
 		OBJ_159 /* SQLCollation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLCollation.swift; sourceTree = "<group>"; };
-		OBJ_16 /* routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = routes.swift; sourceTree = "<group>"; };
 		OBJ_160 /* SQLColumnBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLColumnBuilder.swift; sourceTree = "<group>"; };
 		OBJ_161 /* SQLColumnConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLColumnConstraint.swift; sourceTree = "<group>"; };
 		OBJ_162 /* SQLColumnConstraintAlgorithm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLColumnConstraintAlgorithm.swift; sourceTree = "<group>"; };
@@ -8683,9 +8677,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_13 /* app.swift */,
-				OBJ_14 /* boot.swift */,
-				OBJ_15 /* configure.swift */,
-				OBJ_16 /* routes.swift */,
 			);
 			name = App;
 			path = Sources/App;
@@ -11768,9 +11759,6 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_930 /* app.swift in Sources */,
-				OBJ_931 /* boot.swift in Sources */,
-				OBJ_932 /* configure.swift in Sources */,
-				OBJ_933 /* routes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
