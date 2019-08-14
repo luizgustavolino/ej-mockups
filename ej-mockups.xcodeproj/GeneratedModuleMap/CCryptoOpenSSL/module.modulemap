@@ -1,0 +1,4 @@
+module CCryptoOpenSSL {
+    umbrella "/opt/vapor/ej-mockups/.build/checkouts/crypto/Sources/CCryptoOpenSSL/include"
+    export *
+}
