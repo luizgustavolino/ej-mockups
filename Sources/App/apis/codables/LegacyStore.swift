@@ -42,5 +42,7 @@ struct LegacyStore : Codable {
                      header: header,
                      boosted_bundle: boosted_bundle)
     }
+    
+    var counters:Counters
 }
 

@@ -29,3 +29,11 @@ struct Store : Codable {
     let header:Photo?
     let boosted_bundle:BoostedBundle?
 }
+
+struct Counters : Codable {
+    let available_products_count:Int
+    let sold_products_count:Int
+    let following_count:Int
+    let followers_count:Int
+    let likes_count:Int
+}
