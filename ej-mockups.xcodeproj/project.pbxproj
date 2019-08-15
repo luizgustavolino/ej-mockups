@@ -32,6 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		774322402304D45300854C7E /* LegacyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743223F2304D45300854C7E /* LegacyStore.swift */; };
+		774322422304D46A00854C7E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774322412304D46A00854C7E /* Store.swift */; };
 		OBJ_1069 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* AppTests.swift */; };
 		OBJ_1071 /* App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ej-mockups::App::Product" /* App.framework */; };
 		OBJ_1072 /* Vapor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Vapor::Vapor::Product" /* Vapor.framework */; };
@@ -5077,6 +5079,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7743223F2304D45300854C7E /* LegacyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyStore.swift; sourceTree = "<group>"; };
+		774322412304D46A00854C7E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		"Console::Command::Product" /* Command.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Command.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Console::Product" /* Console.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Console.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Console::Logging::Product" /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Logging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6679,6 +6683,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7743223E2304D44200854C7E /* codables */ = {
+			isa = PBXGroup;
+			children = (
+				7743223F2304D45300854C7E /* LegacyStore.swift */,
+				774322412304D46A00854C7E /* Store.swift */,
+			);
+			path = codables;
+			sourceTree = "<group>";
+		};
 		OBJ_102 /* Query */ = {
 			isa = PBXGroup;
 			children = (
@@ -8676,6 +8689,7 @@
 		OBJ_8 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7743223E2304D44200854C7E /* codables */,
 				OBJ_13 /* app.swift */,
 			);
 			name = App;
@@ -11758,6 +11772,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				774322422304D46A00854C7E /* Store.swift in Sources */,
+				774322402304D45300854C7E /* LegacyStore.swift in Sources */,
 				OBJ_930 /* app.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
