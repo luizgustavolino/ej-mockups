@@ -17,13 +17,13 @@ struct LegacyStore : Codable {
     let id:Int
     let nickname:String
     let name:String
+    let title:String
     let avatar:Photo
     let gender:String
     let city:String
     let follow_user:Bool
     let created_at:String
     let header:Photo
-    let title:String?
     let description:String?
     let can_sell_with_bundle:Bool
     let boosted_bundle:BoostedBundle?
@@ -33,14 +33,12 @@ struct LegacyStore : Codable {
         return Store(seller_id: store?.seller_id,
                      owner_id: store?.owner_id,
                      id_to_follow: store?.owner_id ?? store?.seller_id,
+                     title: title,
                      nickname: nickname,
-                     name: name,
-                     gender: gender,
+                     displayable_name: name,
                      city: city,
                      created_at: created_at,
-                     avatar: avatar,
-                     header: header,
-                     boosted_bundle: boosted_bundle)
+                     avatar: avatar,header: header)
     }
     
     var counters:Counters

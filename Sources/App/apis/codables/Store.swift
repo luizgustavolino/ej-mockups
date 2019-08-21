@@ -20,14 +20,13 @@ struct Store : Codable {
     let seller_id:Int?
     let owner_id:Int?
     var id_to_follow: Int?
+    let title:String
     let nickname:String
-    let name:String
-    let gender:String
+    let displayable_name:String
     let city:String
     var created_at:String
     var avatar:Photo?
     let header:Photo?
-    let boosted_bundle:BoostedBundle?
 }
 
 struct Counters : Codable {
