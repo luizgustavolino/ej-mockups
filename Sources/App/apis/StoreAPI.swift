@@ -16,13 +16,13 @@ public struct StoreAPI {
         self.request = request
     }
     
-    public func counters() -> EventLoopFuture<String> {
+    public func stats() -> EventLoopFuture<String> {
         let promise = self.request.eventLoop.newPromise(String.self)
         DispatchQueue.global().async {
             do {
                 
                 let legacy  = try self.legacyStore()
-                let encoded = try JSONEncoder().encode(legacy.counters)
+                let encoded = try JSONEncoder().encode(legacy.asStats)
                 let encodedJSON = String(data: encoded, encoding: .utf8)
                 promise.succeed(result: encodedJSON!)
                 

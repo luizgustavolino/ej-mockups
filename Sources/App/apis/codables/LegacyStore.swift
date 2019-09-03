@@ -47,25 +47,31 @@ struct LegacyStore : Codable {
     let store:LegacyStoreIDs?
     
     var asStore:Store {
+
+        let short_name = String(name.split(separator: " ").first ?? "")
+
+        return Store(followable_id: id,
+              owner_id: store?.owner_id,
+              seller_id: store?.seller_id,
+              short_name: short_name,
+              nickname: nickname,
+              title: title,
+              location: city,
+              header: header,
+              avatar: avatar)
+    }
+
+    var asStats:Stats {
+
+        let statsCounters = Stats.Counters(
+            available_products: counters.available_products_count,
+            sold_products: counters.sold_products_count,
+            liked_products: counters.likes_count,
+            followers: counters.followers_count,
+            following: counters.following_count)
+
+        return Stats(counters: statsCounters)
         
-        let owner = Store.Owner(id: store?.owner_id ?? store?.seller_id ?? 0,
-                                short_name: String(name.split(separator: " ").first ?? ""),
-                                nickname: nickname)
-        
-        let counts = Store.Counters(available_products: counters.available_products_count,
-                                      sold_products: counters.sold_products_count,
-                                      liked_products: counters.likes_count,
-                                      followers: counters.followers_count,
-                                      following: counters.following_count)
-        
-        let seller = Store.Seller(id: store?.seller_id ?? store?.owner_id ?? 0,
-                                  title: title, location: city,
-                                  last_seen_on: "Visto há 3 dias",
-                                  header_image_public_id: header.image_public_id,
-                                  avatar_image_public_id: avatar.image_public_id,
-                                  stats: Store.Stats(), counters: counts)
-        
-        return Store(followable_id: id, owner: owner, seller: seller)
     }
     
     var counters:Counters
