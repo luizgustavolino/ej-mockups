@@ -32,6 +32,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		39C888722322D20700C9818F /* ProductAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C888712322D20700C9818F /* ProductAPI.swift */; };
+		39C888762322D33700C9818F /* LegacyProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C888752322D33700C9818F /* LegacyProduct.swift */; };
+		39C888782322D49100C9818F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C888772322D49100C9818F /* Product.swift */; };
 		774322402304D45300854C7E /* LegacyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743223F2304D45300854C7E /* LegacyStore.swift */; };
 		774322422304D46A00854C7E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774322412304D46A00854C7E /* Store.swift */; };
 		774322452304DFBA00854C7E /* StoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774322442304DFBA00854C7E /* StoreAPI.swift */; };
@@ -5080,6 +5083,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39C888712322D20700C9818F /* ProductAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductAPI.swift; sourceTree = "<group>"; };
+		39C888752322D33700C9818F /* LegacyProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyProduct.swift; sourceTree = "<group>"; };
+		39C888772322D49100C9818F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7743223F2304D45300854C7E /* LegacyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyStore.swift; sourceTree = "<group>"; };
 		774322412304D46A00854C7E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		774322442304DFBA00854C7E /* StoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreAPI.swift; sourceTree = "<group>"; };
@@ -6685,11 +6691,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7743223E2304D44200854C7E /* codables */ = {
+		39C888732322D32000C9818F /* store */ = {
 			isa = PBXGroup;
 			children = (
 				7743223F2304D45300854C7E /* LegacyStore.swift */,
 				774322412304D46A00854C7E /* Store.swift */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		39C888742322D32A00C9818F /* product */ = {
+			isa = PBXGroup;
+			children = (
+				39C888752322D33700C9818F /* LegacyProduct.swift */,
+				39C888772322D49100C9818F /* Product.swift */,
+			);
+			path = product;
+			sourceTree = "<group>";
+		};
+		7743223E2304D44200854C7E /* codables */ = {
+			isa = PBXGroup;
+			children = (
+				39C888742322D32A00C9818F /* product */,
+				39C888732322D32000C9818F /* store */,
 			);
 			path = codables;
 			sourceTree = "<group>";
@@ -6699,6 +6723,7 @@
 			children = (
 				7743223E2304D44200854C7E /* codables */,
 				774322442304DFBA00854C7E /* StoreAPI.swift */,
+				39C888712322D20700C9818F /* ProductAPI.swift */,
 			);
 			path = apis;
 			sourceTree = "<group>";
@@ -7755,7 +7780,7 @@
 			path = Connection;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -7769,7 +7794,6 @@
 				OBJ_921 /* web.Dockerfile */,
 				OBJ_922 /* CONTRIBUTING.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_50 /* Row */ = {
@@ -10583,7 +10607,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -11785,8 +11809,11 @@
 			files = (
 				774322422304D46A00854C7E /* Store.swift in Sources */,
 				774322402304D45300854C7E /* LegacyStore.swift in Sources */,
+				39C888762322D33700C9818F /* LegacyProduct.swift in Sources */,
 				OBJ_930 /* app.swift in Sources */,
 				774322452304DFBA00854C7E /* StoreAPI.swift in Sources */,
+				39C888722322D20700C9818F /* ProductAPI.swift in Sources */,
+				39C888782322D49100C9818F /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
