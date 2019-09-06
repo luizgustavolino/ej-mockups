@@ -13,11 +13,14 @@ struct Store : Codable {
     let owner_id:Int?
     let seller_id:Int?
 
+    let canonical_url:URL
+
     let short_name:String
     let nickname:String
     let title:String
     let location:String
     let signed_up_on:String = "Jan/2014"
+    let boosted_bundle:Bool
 
     let header:Photo
     let avatar:Photo

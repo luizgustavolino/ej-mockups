@@ -53,10 +53,12 @@ struct LegacyStore : Codable {
         return Store(followable_id: id,
               owner_id: store?.owner_id,
               seller_id: store?.seller_id,
+              canonical_url: URL(string:"https://www.enjoei.com.br/@\(nickname)")!,
               short_name: short_name,
               nickname: nickname,
               title: title,
               location: city,
+              boosted_bundle: boosted_bundle?.enabled ?? false,
               header: header,
               avatar: avatar)
     }
