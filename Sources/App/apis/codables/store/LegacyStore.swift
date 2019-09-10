@@ -31,6 +31,7 @@ struct LegacyStoreIDs : Codable {
 }
 
 struct LegacyStore : Codable {
+    
     let id:Int
     let nickname:String
     let name:String
@@ -56,6 +57,7 @@ struct LegacyStore : Codable {
               canonical_url: URL(string:"https://www.enjoei.com.br/@\(nickname)")!,
               short_name: short_name,
               nickname: nickname,
+              gender: gender,
               title: title,
               location: city,
               boosted_bundle: boosted_bundle?.enabled ?? false,

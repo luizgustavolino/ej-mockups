@@ -17,6 +17,7 @@ struct Store : Codable {
 
     let short_name:String
     let nickname:String
+    let gender:String
     let title:String
     let location:String
     let signed_up_on:String = "Jan/2014"
