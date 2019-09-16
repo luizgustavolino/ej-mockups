@@ -10,11 +10,13 @@ import Foundation
 
 extension LegacyProductModel {
     func asProduct() -> Product {
+        
         let url = URL(string: "https://enjoei.com.br/p/\(id)")!
         let brandMapping = Product.Brand(name: brand.name ?? "", slug: brand.slug ?? "")
         let pricingMapping = Product.FallbackPrice(discount: prices.discount, price: prices.current)
         let photosMapping = photos.compactMap{ $0.image_public_id }
-
+        let comments = Product.Comments(submit_allowed: true, replace_with_faq: true)
+        
         return Product(id: Int(id),
                        title: title,
                        description: description,
@@ -27,7 +29,7 @@ extension LegacyProductModel {
                        fallback_pricing: pricingMapping,
                        original_price: prices.original,
                        photos: photosMapping,
-                       comments_allowed: true,
+                       comments: comments,
                        owner_id: nil,
                        seller_id: Int(user.id))
     }

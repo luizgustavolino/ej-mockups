@@ -37,7 +37,13 @@ struct Product : Codable {
     let original_price:Int
 
     let photos:[String]
-    let comments_allowed:Bool
+    
+    struct Comments : Codable {
+        let submit_allowed:Bool
+        let replace_with_faq:Bool
+    }
+    
+    let comments: Comments
 
     let owner_id:Int?
     let seller_id:Int
