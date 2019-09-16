@@ -34,6 +34,24 @@ public struct ProductAPI {
         return promise.futureResult
     }
 
+    public func count() -> EventLoopFuture<String> {
+        let promise = self.request.eventLoop.newPromise(String.self)
+        DispatchQueue.global().async {
+            do {
+                
+                let legacy  = try self.legacyProduct()
+                let encoded = try JSONEncoder().encode(legacy.comments)
+                let encodedJSON = String(data: encoded, encoding: .utf8)
+                promise.succeed(result: encodedJSON!)
+                
+            } catch {
+                print("Failing: \(error)")
+                promise.fail(error: error)
+            }
+        }
+        return promise.futureResult
+    }
+    
     private func legacyProduct() throws -> LegacyProductModel {
         let client = try HTTPClient.connect(scheme: .https,
                                             hostname: "www.enjoei.com.br",

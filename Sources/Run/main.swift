@@ -12,6 +12,10 @@ router.get("api", "store", String.parameter) { request in
     return StoreAPI(request).store()
 }
 
+router.get("api", "products", Int.parameter, "comments", "count") { request in
+    return ProductAPI(request).count()
+}
+
 router.get("api", "products", Int.parameter) { request in
     return ProductAPI(request).show()
 }
